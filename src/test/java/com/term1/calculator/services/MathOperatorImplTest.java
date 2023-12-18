@@ -17,36 +17,36 @@ public class MathOperatorImplTest {
     private MathOperatorImpl mathOperator;
 
     @Test
-    public void testDoMathMultiplication() throws InvalidOperationException {
+    public void testDoMathWithMultiplication() throws InvalidOperationException {
         double result = mathOperator.doMath(3.0, 4.0, "*");
-        assertEquals(12.0, result, 0.001); // Using a delta for double comparison
+        assertEquals(12.0, result, 0.001);
     }
 
     @Test
-    public void testDoMathDivision() throws InvalidOperationException {
-        double result = mathOperator.doMath(8.0, 4.0, "/");
-        assertEquals(2.0, result, 0.001); // Using a delta for double comparison
+    public void testDoMathWithDivision() throws InvalidOperationException {
+        double result = mathOperator.doMath(6.0, 3.0, "/");
+        assertEquals(2.0, result, 0.001);
     }
 
     @Test
     public void testDoMathAddition() throws InvalidOperationException {
-        double result = mathOperator.doMath(5.0, 3.0, "+");
-        assertEquals(8.0, result, 0.001); // Using a delta for double comparison
+        double result = mathOperator.doMath(4.0, 2.0, "+");
+        assertEquals(6.0, result, 0.001);
     }
 
     @Test
-    public void testDoMathSubtraction() throws InvalidOperationException {
+    public void testDoMathWithSubtraction() throws InvalidOperationException {
         double result = mathOperator.doMath(7.0, 2.0, "-");
-        assertEquals(5.0, result, 0.001); // Using a delta for double comparison
+        assertEquals(5.0, result, 0.001);
     }
 
     @Test
-    public void testDoMathDivisionByZero() {
+    public void testDoMathWithDivisionByZero() {
         assertThrows(InvalidOperationException.class, () -> mathOperator.doMath(10.0, 0.0, "/"));
     }
 
     @Test
-    public void testDoMathUnknownOperation() {
+    public void testDoMathWithInvalidOperation() {
         assertThrows(RuntimeException.class, () -> mathOperator.doMath(10.0, 5.0, "%"));
     }
 }
