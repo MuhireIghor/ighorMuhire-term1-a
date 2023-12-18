@@ -1,4 +1,4 @@
-package com.term1.calculator.dtos;
+package com.term1.calculator.dtos.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
