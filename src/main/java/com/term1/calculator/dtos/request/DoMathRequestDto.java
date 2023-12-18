@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
-
 public class DoMathRequestDto {
 private double operand1;
 private double operand2;
