@@ -12,6 +12,7 @@ public class ApiResponse {
     private Boolean success;
     private String message;
     private Object data;
+    private double result;
 
     public ApiResponse(Boolean success, String message) {
         this.success = success;
@@ -21,6 +22,11 @@ public class ApiResponse {
     public ApiResponse(Boolean success, Object data) {
         this.success = success;
         this.data = data;
+
+    }
+
+    public double getAnswer() {
+        return result;
     }
 
     public static ApiResponse success(Object data) {
